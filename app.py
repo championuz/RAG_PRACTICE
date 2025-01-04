@@ -46,7 +46,7 @@ pc = Pinecone(
 )
 
 all_indexes = pc.list_indexes()
-print("all_indexes", all_indexes)
+# print("all_indexes", all_indexes)
 # pc.delete_index("llama-rag-2")
 
 index_name = 'llama-rag-2'
@@ -75,7 +75,7 @@ print(f"Connected to index: {index}")
 embeddings = OpenAIEmbeddings()
 
 
-vector_store = PineconeVectorStore(index=index_name, embedding=embeddings)
+vector_store = PineconeVectorStore(index=index, embedding=embeddings)
 
 
 # Function to add texts to the vector store
